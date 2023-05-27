@@ -1,0 +1,76 @@
+.testimonials{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+     & h4{
+        color: var(--mainColor);
+        font-size: 18px;
+        text-align: center;
+    }
+    & h2{
+        color:#0B2154;
+        font-size: 38px;
+        text-align: center;
+        
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .card{
+            width: 330px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+                justify-content: center;
+                align-items: center;
+
+            & img{
+                
+                object-fit: contain;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 5px solid rgb(240, 237, 237);
+                
+            }
+            & h3{
+                 color:#0B2154;
+            }
+            & p{
+                width: 100%;
+                background-color: rgb(240, 237, 237);
+                padding: 10px;
+                 color: #6c757d;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .testimonials{
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 1.5rem;
+            .card{
+                
+                display: flex;
+                flex-direction: row;
+                border-radius: 2px;
+
+            
+                width: 100%;
+                height: 100%;
+            }
+            .card.middle{
+                
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.aboutPageHero{
+    width: 100vw;
+    height: 200px;
+        position: relative;
+  
+    .bgImg{
+
+        background-image: url("../../../assets/images/carousel-bg-1.jpg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center;
+    }
+    .bgImg::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .80);
+    
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    & h1{
+        display: flex;
+        color: white;
+         font-size: calc(1.525rem + 3.3vw);
+  }
+  .breadCrumbs{
+    display: flex;
+    color: white;
+    gap: 5px;
+  }
+  
+  
+   
+}
+}

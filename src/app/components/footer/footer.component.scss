@@ -1,0 +1,161 @@
+.footer{
+     width: 100vw;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+     .bgImg{
+
+        background-image: url("../../../assets/images/carousel-bg-1.jpg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center;
+    }
+    .bgImg::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .80);
+    
+  }
+  .container{
+    display: flex;
+    width: 1000px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    .item{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        text-align: flex-start;
+         & h3{
+            font-size: 25px;
+            font-weight: 700;
+            
+        }
+
+        & div{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+       
+      
+
+    }
+    }
+    .item:nth-of-type(1){
+            & span{
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                font-size: 16px;
+                font-weight: 400;
+                
+                
+            }
+            .socialIcons{
+                display: flex;
+                gap: 5px;
+                .icon{
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    padding: 2px 6px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .item:nth-of-type(2){
+            & span{
+                display: flex;
+                flex-direction: column;
+                & h2{
+                    font-size: 16px;
+                    margin-bottom: 4px;
+                }
+                & h5{
+                    font-weight:400 ;
+                }
+            }
+
+        }
+        .item:nth-of-type(3){
+            & ul{
+                & li{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    list-style: none;
+                    & span{
+                        font-weight: 800;
+                        font-size: medium;
+                    }
+                    & h6{
+                        font-weight: 400;
+                        font-size: 16px;
+
+                    }
+
+                    
+
+
+                }
+            }
+        }
+        .item:nth-of-type(4){
+            & p{
+                font-size: 16px;
+                font-weight: 400;
+            }
+            .form{
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                padding: 10px 5px;
+                width: 100%;
+                & input{
+                    padding: 5px;
+                    border: none;
+                    outline: none;
+                }
+                .btnSignUp{
+                    font-size: 10px;
+                    font-weight: 400;
+                    background-color: var(--mainColor);
+                    color: white;
+                    padding: 10px 5px;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
+        }
+  }
+}
+@media only screen and (max-width: 768px){
+    .footer{
+        height: 100vh;
+        .container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0px 20px;
+            gap: 20px;
+        }
+    }
+}

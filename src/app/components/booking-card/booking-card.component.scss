@@ -1,0 +1,158 @@
+.bookingCard{
+    width: 100vw;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    .bgImg{
+
+        background-image: url("../../../assets/images/carousel-bg-2.jpg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-position: center;
+    }
+    .bgImg::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .80);
+    
+  }
+  .container{
+    position: absolute;
+    width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    align-items: center;
+    display: flex;
+    .left{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 1rem;
+        color: white;
+        padding-right: 15px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        & h1{
+            font-size: 38px;
+        }
+        & p{
+            width: 100%;
+            line-height: 1.2rem;
+            flex-basis:auto;
+
+
+        }
+
+    }
+    .right{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--mainColor);
+        height: 100%;
+        width: 100%;
+        & h5{
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+            font-size: 38px;
+        }
+        & form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            padding: 0rem 4rem;
+            & input{
+                padding: 13px 5px;
+                border: none;
+                outline: none;
+            }
+            & div{
+                width: 100%;
+                display: flex;
+                gap: 10px;
+                & select{
+                    padding: 13px 5px;
+                    outline: none;
+                    border: none;
+                    display: flex;
+                    flex-direction: column;
+                    color: #6c757d;
+                }
+                 & input{
+                    padding:13px 5px;
+                    width: 100%;
+                    color: #6c757d;
+
+                 }
+            }
+        }
+        .btnBook{
+            background-color: #0B2154;
+            color: white;
+            font-weight: 800;
+            padding: 15px 0px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.7s ease-in-out;
+
+        }
+        .btnBook:hover{
+            background-color: #081b46;
+
+        }
+    }
+
+  }
+}
+@media only screen and (max-width: 768px){
+    .bookingCard{
+    height: 90vh;
+    
+    position: relative;
+    overflow: hidden;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        height: 100%;
+        .left{
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding:  0px 30px;
+            & h1{
+                font-size: 27px;
+
+            }
+
+        }
+        .right{
+            padding: 2rem 0rem;
+            & h5{
+                margin-bottom: 1rem;
+                 font-size: 27px;
+
+            }
+            & form{
+                padding: 0rem 2rem;
+
+            }
+        }
+    }
+}}

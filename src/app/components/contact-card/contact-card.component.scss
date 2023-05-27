@@ -1,0 +1,75 @@
+.contactsCard{
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    .contContainer{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: 1000px;
+        height: 100%;
+        .left{
+            width: 500px;
+            height: 100%;
+            & img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 500px;
+            height: 100%;
+            .form{
+                display: flex;
+                flex-direction:column;
+                gap: 5px;
+                & input{
+                    padding: 15px 5px;
+                    max-width: 100%;
+                    outline: none;
+                }
+                & textarea{
+                    max-width: 100%;
+                    min-width: 100%;
+                    outline: none;
+                    padding: 15px 5px;
+                }
+                .btnContact{
+                    background-color: var(--mainColor);
+                    color: white;
+                    padding: 15px 0px;
+                    outline: none;
+                    border: none;
+                     transition: all 0.7s ease-in-out;
+                    
+                }
+                .btnContact:hover{
+                    background-color: rgb(155, 6, 6);
+                    color: white;
+                    }
+            }
+            
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .contactsCard{
+    
+    .contContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .left{
+            width: 100%;
+        }
+        .right{
+            width: 100%;
+        }
+
+    }}
+}

@@ -1,0 +1,74 @@
+.stats{
+    width: 100vw;
+    height: 200px;
+        position: relative;
+  
+    .bgImg{
+
+        background-image: url("../../../assets/images/carousel-bg-1.jpg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center;
+    }
+    .bgImg::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .80);
+    
+  }
+  .container{
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    .stat{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+       
+        z-index: 222;
+        & span:nth-of-type(1){
+            font-size: 16px;
+            font-weight: 700;
+        }
+        & span:nth-of-type(2){
+            font-size:30px;
+            font-weight: 800;
+        }
+        & p{
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+  }
+  
+  
+   
+}
+@media only screen and (max-width: 768px){
+    .stats{
+        height: 80vh;
+        .bgImg{
+            object-fit: contain;
+            background-position: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+        }
+    }
+}
