@@ -14,14 +14,14 @@
         </div>
     <div class="links" [ngClass]="{'hide':!menuOpened}">
         <span class="home" routerLink="/">Home</span>
-        <span class="about" routerLink="/about">About</span>
-        <span class="services" routerLink="/services">Services</span>
-        <span class="contacts" routerLink="/contacts">Contacts</span>
+        <span class="about" routerLink="#/about">About</span>
+        <span class="services" routerLink="#/services">Services</span>
+        <span class="contacts" routerLink="#/contacts">Contacts</span>
          <span class="pagesLink" (click)="handleClick()" >Page List</span>
          <div class="pages" *ngIf="clicked" >
-                 <span value="" routerLink="/bookings">Booking</span>
-                 <span value="" routerLink="/technicians">Team</span>
-                 <span value="" routerLink="/testimonials">Testimonials</span>
+                 <span value="" routerLink="#/bookings">Booking</span>
+                 <span value="" routerLink="#/technicians">Team</span>
+                 <span value="" routerLink="#/testimonials">Testimonials</span>
         </div>
     
         <span class="prices">Get A Quote</span>
