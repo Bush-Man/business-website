@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { HashLocationStrategy } from '@angular/common';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 //import { PostComponent } from './components/post/post.component';
@@ -74,7 +75,7 @@ import { TestimonialsPageComponent } from './Pages/testimonials-page/testimonial
     AppRoutingModule,
     
   ],
-  providers: [],
+  providers: [HashLocationStrategy],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
